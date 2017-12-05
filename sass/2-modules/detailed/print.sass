@@ -1,0 +1,30 @@
+.print-wrap
+	display: flex
+	justify-content: space-around
+
+	.print
+		position: relative
+		padding: 10px 20px
+		display: inline-block
+		color: white
+		background-color: transparentize($activeLink, 0.1)
+		border-radius: 7px
+		display: flex
+		align-items: center
+		cursor: pointer
+		text-transform: uppercase
+
+		&>*
+			pointer-events: none
+
+		&:hover, &:active
+			background-color: $hoverLink
+			top: -1px
+			box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.4)
+
+		&>:first-child
+			font-size: 1.3rem
+			padding: 0.19rem 10px 0 0
+		&>:last-child
+			path
+				fill: white

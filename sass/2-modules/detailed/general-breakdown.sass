@@ -1,0 +1,107 @@
+.general-breakdown
+
+	input
+		display: none
+	&>*
+		margin: 0.5rem 0
+
+	.top-bar
+		border-radius: 7px
+		background-color: rgb(217,248,248)
+		height: 3rem
+		font-size: 1.6rem
+		position: relative
+		cursor: pointer
+		display: flex
+		align-items: center
+		padding: 0 0 0 1rem
+		overflow: hidden
+		color: $accentTextColor
+
+		&>*
+			position: relative
+			margin: 0 0.5rem 0 0
+			transition: all 300ms ease-in-out
+			path
+				transition: all 300ms ease-in-out
+				fill: $expandLink
+
+		&:hover, &:active
+			top: -1px
+			box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.4)
+	
+	.progress-bar
+		height: inherit
+		position: absolute
+		top: 0
+		left: -100%
+		width: 100%
+		border-radius: 7px
+
+	.text
+		flex: 1
+		text-align: center
+		font-size: inherit
+		pointer-events: none
+		text-transform: uppercase
+		top: 0.1875rem
+
+	.percent
+		text-align: right
+		font-size: inherit
+		top: 0.1875rem
+
+	.positive
+		display: block
+		background-color: rgb(217,248,248)
+		border-radius: 7px
+
+		.progress-bar
+			transform: translate3d(59.5%, 0, 0)
+			background-color: $green
+	.unsure
+		display: block
+		background-color: rgb(217,248,248)
+		border-radius: 7px
+
+		.progress-bar
+			transform: translate3d(8.9%, 0, 0)
+			background-color: $midGrey
+	.negative
+		display: block
+		background-color: rgb(217,248,248)
+		border-radius: 7px
+		.progress-bar
+			transform: translate3d(31.6%, 0, 0)
+			background-color: $orange
+
+	.info
+		display: flex
+		height: 0
+		overflow: hidden
+		opacity: 0
+		transition: all 300ms ease-in-out
+
+		.genders
+			width: 385pxr
+
+
+
+*:checked + label
+	.top-bar
+		.icon
+			transform: rotateZ(180deg)
+			path
+				fill: $activeLink
+		&:hover, &:active
+			top: 0
+			box-shadow: initial
+	.info
+		opacity: 1
+
+
+
+
+
+
+

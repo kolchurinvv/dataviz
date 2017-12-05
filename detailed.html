@@ -1,0 +1,156 @@
+
+<html>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Detailed layout</title>
+  <link rel="stylesheet" href="assets/css/main.css"/>
+  <script src="assets/jsmin/d3.min.js"></script>
+  <script src="assets/jsmin/vizuly/vizuly_core.min.js"></script>
+  <script src="assets/jsmin/vizuly/vizuly_radialprogress.min.js"></script>
+  <script src="assets/jsmin/vizuly/radialprogress.min.js"></script>
+  <script src="assets/jsmin/dataset-min.js"></script>
+  <body onload="initialize('#viz_container'), changeData(12.2)">
+    <div class="container">
+      <header>
+        <nav><a href="">Questions</a><a href="">Organization</a><a href="index.html">Data Report</a></nav>
+      </header>
+      <input id="sideNavToggle" type="checkbox" value=""/>
+      <nav class="side-nav">
+        <div class="nav-head">
+          <div class="tooltip">choose your poll</div>
+          <label class="hamburger" for="sideNavToggle">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </label>
+        </div>
+        <div class="links">
+          <div class="sidePollLinkWrap"><a class="pollLink" href="detailed.html">Do you think police should carry tasers?</a></div>
+          <div class="sidePollLinkWrap"><a class="pollLink" href="">Protective &amp; reflective cycling gear</a></div>
+          <div class="sidePollLinkWrap"><a class="pollLink" href="">Ethical problems of self-driving cars</a></div>
+          <div class="sidePollLinkWrap"><a class="pollLink" href="">Do you feel underpayed?</a></div>
+        </div>
+      </nav>
+      <main class="details-container">
+        <h1 class="top-title">Tasers on Police officers</h1>
+        <div class="print-wrap">
+          <div class="print"> <span>print report</span>
+            <div class="icon">
+              <svg viewBox="0 0 26 28">
+                <path d="M6 24h14v-4h-14v4zM6 14h14v-6h-2.5c-0.828 0-1.5-0.672-1.5-1.5v-2.5h-10v10zM24 15c0-0.547-0.453-1-1-1s-1 0.453-1 1 0.453 1 1 1 1-0.453 1-1zM26 15v6.5c0 0.266-0.234 0.5-0.5 0.5h-3.5v2.5c0 0.828-0.672 1.5-1.5 1.5h-15c-0.828 0-1.5-0.672-1.5-1.5v-2.5h-3.5c-0.266 0-0.5-0.234-0.5-0.5v-6.5c0-1.641 1.359-3 3-3h1v-8.5c0-0.828 0.672-1.5 1.5-1.5h10.5c0.828 0 1.969 0.469 2.562 1.062l2.375 2.375c0.594 0.594 1.062 1.734 1.062 2.562v4h1c1.641 0 3 1.359 3 3z"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <section class="questionAndDate-container">
+          <div class="question">
+            <h3>question</h3><span>Do you think police should carry tasers?</span>
+          </div>
+          <div class="start-date">
+            <h3>start date</h3><span>31 july 2017</span>
+          </div>
+          <div class="end-date">
+            <h3>end date</h3><span>09 august 2017</span>
+          </div>
+        </section>
+        <section class="general-breakdown">
+          <input id="positive" type="checkbox" value=""/>
+          <label class="positive" for="positive">
+            <div class="top-bar">
+              <div class="progress-bar"></div>
+              <div class="icon">
+                <svg viewBox="0 0 24 28">
+                  <path d="M20.062 14.016c0-0.266-0.094-0.516-0.281-0.703l-1.422-1.422c-0.187-0.187-0.438-0.281-0.703-0.281s-0.516 0.094-0.703 0.281l-2.953 2.953v-7.844c0-0.547-0.453-1-1-1h-2c-0.547 0-1 0.453-1 1v7.844l-2.953-2.953c-0.187-0.187-0.438-0.297-0.703-0.297s-0.516 0.109-0.703 0.297l-1.422 1.422c-0.187 0.187-0.281 0.438-0.281 0.703s0.094 0.516 0.281 0.703l7.078 7.078c0.187 0.187 0.438 0.281 0.703 0.281s0.516-0.094 0.703-0.281l7.078-7.078c0.187-0.187 0.281-0.438 0.281-0.703zM24 14c0 6.625-5.375 12-12 12s-12-5.375-12-12 5.375-12 12-12 12 5.375 12 12z"></path>
+                </svg>
+              </div>
+              <div class="text">yes</div>
+              <div class="percent">59.5&#37</div>
+            </div>
+            <div class="info">
+              <div class="genders"></div>
+              <div class="reasons"></div>
+            </div>
+          </label>
+          <input id="unsure" type="checkbox" value=""/>
+          <label class="unsure" for="unsure">
+            <div class="top-bar">
+              <div class="progress-bar"></div>
+              <div class="icon">
+                <svg viewBox="0 0 24 28">
+                  <path d="M20.062 14.016c0-0.266-0.094-0.516-0.281-0.703l-1.422-1.422c-0.187-0.187-0.438-0.281-0.703-0.281s-0.516 0.094-0.703 0.281l-2.953 2.953v-7.844c0-0.547-0.453-1-1-1h-2c-0.547 0-1 0.453-1 1v7.844l-2.953-2.953c-0.187-0.187-0.438-0.297-0.703-0.297s-0.516 0.109-0.703 0.297l-1.422 1.422c-0.187 0.187-0.281 0.438-0.281 0.703s0.094 0.516 0.281 0.703l7.078 7.078c0.187 0.187 0.438 0.281 0.703 0.281s0.516-0.094 0.703-0.281l7.078-7.078c0.187-0.187 0.281-0.438 0.281-0.703zM24 14c0 6.625-5.375 12-12 12s-12-5.375-12-12 5.375-12 12-12 12 5.375 12 12z"></path>
+                </svg>
+              </div>
+              <div class="text">maybe</div>
+              <div class="percent">8.9&#37</div>
+            </div>
+            <div class="info">
+              <div class="genders"></div>
+              <div class="reasons"></div>
+            </div>
+          </label>
+          <input id="negative" type="checkbox" value=""/>
+          <label class="negative" for="negative">
+            <div class="top-bar">
+              <div class="progress-bar"></div>
+              <div class="icon">
+                <svg viewBox="0 0 24 28">
+                  <path d="M20.062 14.016c0-0.266-0.094-0.516-0.281-0.703l-1.422-1.422c-0.187-0.187-0.438-0.281-0.703-0.281s-0.516 0.094-0.703 0.281l-2.953 2.953v-7.844c0-0.547-0.453-1-1-1h-2c-0.547 0-1 0.453-1 1v7.844l-2.953-2.953c-0.187-0.187-0.438-0.297-0.703-0.297s-0.516 0.109-0.703 0.297l-1.422 1.422c-0.187 0.187-0.281 0.438-0.281 0.703s0.094 0.516 0.281 0.703l7.078 7.078c0.187 0.187 0.438 0.281 0.703 0.281s0.516-0.094 0.703-0.281l7.078-7.078c0.187-0.187 0.281-0.438 0.281-0.703zM24 14c0 6.625-5.375 12-12 12s-12-5.375-12-12 5.375-12 12-12 12 5.375 12 12z"></path>
+                </svg>
+              </div>
+              <div class="text">no</div>
+              <div class="percent">31.6&#37</div>
+            </div>
+            <div class="info">
+              <div class="genders"></div>
+              <div class="reasons"></div>
+            </div>
+          </label>
+        </section>
+        <section class="traffic-container">
+          <h3 class="top-title">Traffic statistics</h3>
+          <div class="traffic">
+            <div class="views">
+              <div class="total"><span>Total views</span><span>649</span></div>
+              <div class="resp"><span>Respondents</span><span>79</span></div>
+            </div>
+            <div class="engagement-graph">
+              <div class="top-title">Engagement</div>
+              <div id="gauge-cluster">
+                <div id="gauge1"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="platforms-container">
+          <h1 class="top-title">platforms used and their ratings</h1>
+        </section>
+        <section class="locations-container">
+          <h3 class="top-title">Top locations</h3>
+        </section>
+        <section class="modular-graph-container">
+          <h1 class="top-title">Modular Graph</h1>
+          <div class="settings" style="height: 300px; background-color: #eee; margin-bottom: 50px;">advanced settings section</div>
+          <div id="y-axis">
+            <div class="title">Vote:</div>
+            <div id="subtitles"></div>
+          </div>
+          <div class="graph-wrap">
+            <div class="section sec0"></div>
+            <div class="section sec1"> </div>
+            <div class="section sec2"> </div>
+          </div>
+          <div id="x-axis"></div>
+        </section>
+      </main>
+      <footer>
+        <section class="left-side">
+          <h5 class="footerTitle">About this app</h5><a href="">Terms of Use</a><a href="">Submission Policy</a><a href="">Privacy</a><a href="">FAQ</a>
+        </section>
+        <section class="right-side">
+          <h5 class="footerTitle">Contact us</h5><a href="">support@ptownhallapp.io</a>
+        </section>
+      </footer>
+    </div>
+  </body>
+</html>

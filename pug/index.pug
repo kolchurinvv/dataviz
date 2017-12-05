@@ -1,0 +1,14 @@
+html
+	meta(charset="UTF-8")
+	meta(http-equiv="X-UA-Compatible", content="IE=edge")
+	meta(name="viewport", content="width=device-width, initial-scale=1")
+	title Main layout
+	link(rel="stylesheet", href="assets/css/main.css")
+	include _assets/_components/_common/scripts_include
+	body(onload="initialize('gauge-cluster')")
+		.container
+			include _assets/_components/_common/header+nav
+			include _assets/_components/_common/side-nav
+			include _assets/_components/_main/DRcontainer
+			include _assets/_components/_common/footer
+		script(src='assets/jsmin/total-votes-min.js')

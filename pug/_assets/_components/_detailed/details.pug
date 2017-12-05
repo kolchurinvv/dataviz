@@ -1,0 +1,31 @@
+main.details-container
+	h1.top-title Tasers on Police officers
+	.print-wrap
+		.print 
+			span print report
+			.icon
+				include ../../_icons/print-icon
+	include questionAndDate-container
+	include general-breakdown
+	section.traffic-container
+		h3.top-title Traffic statistics
+		.traffic
+			.views
+				.total
+					span Total views
+					span 649
+				.resp
+					span Respondents
+					span 79
+			.engagement-graph
+				.top-title Engagement
+				#gauge-cluster
+					#gauge1
+	section.platforms-container
+		h1.top-title platforms used and their ratings
+	section.locations-container
+		h3.top-title Top locations
+	section.modular-graph-container
+		h1.top-title Modular Graph
+		.settings(style='height: 300px; background-color: #eee; margin-bottom: 50px;') advanced settings section
+		include modular-graph

@@ -1,0 +1,38 @@
+main.DRcontainer
+	h1.top-title Lifetime Statistics
+	h2.subtitle.top-title Most engagement
+	section.engagement
+		ul.legend
+			li
+				a#test(href='detailed.html' onmouseover='changeData(this.childNodes[3].dataset.value)')
+					.label
+						include ../../_icons/solid-circle-icon
+					.poll-title(data-value='12.2') Tasers on Police
+			li
+				a(href='' onmouseover='changeData(this.childNodes[3].dataset.value)')
+					.label
+						include ../../_icons/solid-circle-icon
+					.poll-title(data-value='20') Poll two
+			li
+				a(href='' onmouseover='changeData(this.childNodes[3].dataset.value)')
+					.label
+						include ../../_icons/solid-circle-icon
+					.poll-title(data-value='31') Poll three
+			li
+				a(href='' onmouseover='changeData(this.childNodes[3].dataset.value)')
+					.label
+						include ../../_icons/solid-circle-icon
+					.poll-title(data-value='40') Poll four
+			li
+				a(href='' onmouseover='changeData(this.childNodes[3].dataset.value)')
+					.label
+						include ../../_icons/solid-circle-icon
+					.poll-title(data-value='87') Poll five
+		#gauge-cluster
+			#gauge1
+	section.totalVotes
+		h2.subtitle Total votes per poll
+	section.platforms-container
+		h1 top platforms throughout polls
+	section.engagementMap
+		h2.subtitle Engagement map

@@ -1,0 +1,100 @@
+
+<html>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Main layout</title>
+  <link rel="stylesheet" href="assets/css/main.css"/>
+  <script src="assets/jsmin/d3.min.js"></script>
+  <script src="assets/jsmin/vizuly/vizuly_core.min.js"></script>
+  <script src="assets/jsmin/vizuly/vizuly_radialprogress.min.js"></script>
+  <script src="assets/jsmin/vizuly/radialprogress.min.js"></script>
+  <body onload="initialize('gauge-cluster')">
+    <div class="container">
+      <header>
+        <nav><a href="">Questions</a><a href="">Organization</a><a href="index.html">Data Report</a></nav>
+      </header>
+      <input id="sideNavToggle" type="checkbox" value=""/>
+      <nav class="side-nav">
+        <div class="nav-head">
+          <div class="tooltip">choose your poll</div>
+          <label class="hamburger" for="sideNavToggle">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </label>
+        </div>
+        <div class="links">
+          <div class="sidePollLinkWrap"><a class="pollLink" href="detailed.html">Do you think police should carry tasers?</a></div>
+          <div class="sidePollLinkWrap"><a class="pollLink" href="">Protective &amp; reflective cycling gear</a></div>
+          <div class="sidePollLinkWrap"><a class="pollLink" href="">Ethical problems of self-driving cars</a></div>
+          <div class="sidePollLinkWrap"><a class="pollLink" href="">Do you feel underpayed?</a></div>
+        </div>
+      </nav>
+      <main class="DRcontainer">
+        <h1 class="top-title">Lifetime Statistics</h1>
+        <h2 class="subtitle top-title">Most engagement</h2>
+        <section class="engagement">
+          <ul class="legend">
+            <li><a id="test" href="detailed.html" onmouseover="changeData(this.childNodes[3].dataset.value)">
+                <div class="label">
+                  <svg viewBox="0 0 24 28">
+                    <path d="M24 14c0 6.625-5.375 12-12 12s-12-5.375-12-12 5.375-12 12-12 12 5.375 12 12z"></path>
+                  </svg>
+                </div>
+                <div class="poll-title" data-value="12.2">Tasers on Police</div></a></li>
+            <li><a href="" onmouseover="changeData(this.childNodes[3].dataset.value)">
+                <div class="label">
+                  <svg viewBox="0 0 24 28">
+                    <path d="M24 14c0 6.625-5.375 12-12 12s-12-5.375-12-12 5.375-12 12-12 12 5.375 12 12z"></path>
+                  </svg>
+                </div>
+                <div class="poll-title" data-value="20">Poll two</div></a></li>
+            <li><a href="" onmouseover="changeData(this.childNodes[3].dataset.value)">
+                <div class="label">
+                  <svg viewBox="0 0 24 28">
+                    <path d="M24 14c0 6.625-5.375 12-12 12s-12-5.375-12-12 5.375-12 12-12 12 5.375 12 12z"></path>
+                  </svg>
+                </div>
+                <div class="poll-title" data-value="31">Poll three</div></a></li>
+            <li><a href="" onmouseover="changeData(this.childNodes[3].dataset.value)">
+                <div class="label">
+                  <svg viewBox="0 0 24 28">
+                    <path d="M24 14c0 6.625-5.375 12-12 12s-12-5.375-12-12 5.375-12 12-12 12 5.375 12 12z"></path>
+                  </svg>
+                </div>
+                <div class="poll-title" data-value="40">Poll four</div></a></li>
+            <li><a href="" onmouseover="changeData(this.childNodes[3].dataset.value)">
+                <div class="label">
+                  <svg viewBox="0 0 24 28">
+                    <path d="M24 14c0 6.625-5.375 12-12 12s-12-5.375-12-12 5.375-12 12-12 12 5.375 12 12z"></path>
+                  </svg>
+                </div>
+                <div class="poll-title" data-value="87">Poll five</div></a></li>
+          </ul>
+          <div id="gauge-cluster">
+            <div id="gauge1"></div>
+          </div>
+        </section>
+        <section class="totalVotes">
+          <h2 class="subtitle">Total votes per poll</h2>
+        </section>
+        <section class="platforms-container">
+          <h1>top platforms throughout polls</h1>
+        </section>
+        <section class="engagementMap">
+          <h2 class="subtitle">Engagement map</h2>
+        </section>
+      </main>
+      <footer>
+        <section class="left-side">
+          <h5 class="footerTitle">About this app</h5><a href="">Terms of Use</a><a href="">Submission Policy</a><a href="">Privacy</a><a href="">FAQ</a>
+        </section>
+        <section class="right-side">
+          <h5 class="footerTitle">Contact us</h5><a href="">support@ptownhallapp.io</a>
+        </section>
+      </footer>
+    </div>
+    <script src="assets/jsmin/total-votes-min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+.modular-graph-container
+	position: relative
+	.sec0
+		order: 1
+	.sec1
+		order: 2
+	.sec2
+		order: 3
+
+	#y-axis
+		height: 650px
+		width: 100px
+		background-color: pink
+		position: absolute
+
+		.title
+			position: absolute
+			top: - 2rem
+			font-size: 2rem
+
+		#subtitles
+			position: relative
+			text-align: right
+			padding: 0 1rem 0 0 
+			height: inherit
+			display: flex
+			flex-direction: column
+			justify-content: space-around
+
+
+
+	.graph-wrap
+		position: relative
+		background-color: green
+		width: 1000px
+		height: 600px
+		margin: 100px auto 0px auto
+		display: flex
+		flex-direction: column
+		justify-content: space-evenly
+
+
+		.section
+			width: 100%
+			flex-grow: 1
+			background-color: #FFF
+			display: flex
+			flex-direction: row
+
+
+			&:nth-child(2n)
+				background-color: #eee
+
+			.subsection
+				border-right: 2px solid black
+				flex-grow: 1
+				display: flex
+				justify-content: center
+				flex-direction: row
+
+
+				.gender-col
+					margin: 0px 5px
+
+				.male
+					order: 1
+
+				.female
+					order: 2
+
+				.other
+					order: 3
+
+				.unknown
+					order: 4
+
+
+	#x-axis
+		background-color: orange
+		position: absolute
+		height: 20px
+		width: 1000px
+		left: 100px
+		display: flex
+		flex-direction: row
+		flex-wrap: nowrap
+		justify-content: space-around
+		align-items: flex-end
+
+		& >*:first-child
+			border-left: 4px solid black
+		& >*:last-child
+			border-right: 4px solid black
+
+		& > *
+			border-left: 2px solid black
+			border-right: 2px solid black
+			border-top: 4px solid black
+			width: 100%
+			text-align: center

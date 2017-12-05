@@ -1,0 +1,32 @@
+.details-container
+
+	section
+		margin: 0 0 50px 0
+
+	.icon
+		width: 1.7rem
+
+	.print-wrap
+		display: flex
+		justify-content: space-around
+
+	@import 'print'
+
+	.questionAndDate-container
+		width: 100%
+		display: flex
+
+		&>*
+			padding: 0 10px
+
+		&>:first-child
+			flex: 1
+			padding: 0 10px 0 0
+
+		&>:last-child
+			padding: 0 0 0 10px
+
+	@import "general-breakdown"
+
+	@import 'traffic'
+	@import 'modular-graph'

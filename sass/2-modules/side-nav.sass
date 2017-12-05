@@ -1,0 +1,93 @@
+.side-nav
+	display: flex
+	flex-direction: column
+	position: absolute
+	left: 0
+	top: 50px
+	bottom: 0
+	width: 20.3rem
+	transform: translateX(-20.3rem)
+	z-index: 1
+	+sideMenu
+	
+	.nav-head
+		background-color: $orange
+		color: $sideLink
+		display: flex
+		align-items: center
+		transform: translateX(50px)
+		+sideMenu
+
+		.tooltip
+			font-size: 1.3rem
+			line-height: 1
+			padding: 0.65rem
+			text-align: center
+			flex: 1
+
+		.hamburger
+			cursor: pointer
+			.line
+				background-color: $sideLink
+				height: 5px
+				width: 40px
+				border-radius: 2px
+				margin: 5px
+				opacity: 1
+				transform-origin: 0 0
+				pointer-events: none
+				+sideMenu
+
+	.links
+		height: 100%
+		background:
+			image: url("../img/texture_bg.png")
+			size: 100%
+			position: 0 0
+			repeat: repeat-y
+
+		.sidePollLinkWrap
+			background-color: transparentize($sidePollLink, 0.5)
+			&:nth-child(2n)
+				background-color: transparentize($green, 0.5)
+				&>.pollLink
+					background-color: $green
+
+			.pollLink
+				color: $sideLink
+				background-color: $sidePollLink
+				padding: 10px 5px 10px 20px
+				display: inline-block
+
+				&:hover
+					color: $textColor
+
+#sideNavToggle
+	display: none
+
+	&:checked + .side-nav
+		transform: translateX(0px)
+
+		.nav-head
+			transform: translateX(0px)
+
+		.hamburger
+		
+			.line:first-child
+				transform: rotateZ(45deg) translateX(7px) translateY(-12px)
+			.line:nth-child(2)
+				opacity: 0
+			.line:last-child
+				transform: rotateZ(-45deg) translateX(3px) translateY(10px)
+
+	&:checked + .side-nav + main
+		transform: translateX(20.3rem)
+	
+
+
+
+
+
+
+
+
